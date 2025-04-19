@@ -14,10 +14,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ONE"
-        android:textSize="35sp"
-        android:shadowColor="@color/black"
-        android:background="#FF00FF" />
+        android:text="Киберкотлетное уберпрограммирование!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
