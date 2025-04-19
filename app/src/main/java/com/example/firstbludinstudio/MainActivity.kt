@@ -28,10 +28,9 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
 
         button.setOnClickListener {
-            val t = textInput.text.toString()
-            Log.d("MY MESSAGE", "Ddtltyysq ntrcn $t")
-            Timber.d("ТИШИНА! ТИМБЕР ГОВОРИТ! $t")
-
+            val text = textInput.text.toString()
+            Log.d("MY MESSAGE", "В инпут передали $text")
+            Timber.d("Тимбер логгирует - $text")
         }
     }
 }
