@@ -33,6 +33,5 @@ class MyRecyclerAdapter(private val dataList: List<ViewModel>):
 
         holder.imageView.setImageResource(currentItem.imageId)
         holder.textView.text = currentItem.title
-
     }
 }

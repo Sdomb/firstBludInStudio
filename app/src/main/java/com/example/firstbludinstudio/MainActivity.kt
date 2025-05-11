@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Timber.plant(Timber.DebugTree())
         enableEdgeToEdge()
-        setContentView(R.layout.activity_ten)
+        setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.baseFrame)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -40,7 +40,5 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = MyRecyclerAdapter(listsAnimal)
         recyclerView.adapter = adapter
-
     }
-
 }
