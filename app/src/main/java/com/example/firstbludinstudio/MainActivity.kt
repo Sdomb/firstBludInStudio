@@ -2,8 +2,11 @@ package com.example.firstbludinstudio
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+
+import android.util.Log
 import android.widget.Button
-import android.widget.TextView
+import android.widget.EditText
+
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,18 +19,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Timber.plant(Timber.DebugTree())
         enableEdgeToEdge()
-        setContentView(R.layout.activity_eight)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.eight)) { v, insets ->
+
+        setContentView(R.layout.activity_five)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.five)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val button = findViewById<Button?>(R.id.button)
-        val text = findViewById<TextView?>(R.id.text)
+        val textInput = findViewById<EditText>(R.id.input)
+        val button = findViewById<Button>(R.id.button)
 
         button.setOnClickListener {
-            text.text = "Нажата кнопка"
+            val text = textInput.text.toString()
+            Log.d("MY MESSAGE", "В инпут передали $text")
+            Timber.d("Тимбер логгирует - $text")
         }
     }
 }
