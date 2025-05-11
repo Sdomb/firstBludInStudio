@@ -12,6 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/input"
+        android:autofillHints=""
         android:hint="введите текст"
         android:ems="10"
         android:inputType="phone"/>
