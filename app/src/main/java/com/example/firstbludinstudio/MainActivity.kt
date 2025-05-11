@@ -3,6 +3,7 @@ package com.example.firstbludinstudio
 import android.annotation.SuppressLint
 import android.os.Bundle
 
+
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -20,12 +21,15 @@ class MainActivity : AppCompatActivity() {
         Timber.plant(Timber.DebugTree())
         enableEdgeToEdge()
 
+
         setContentView(R.layout.activity_five)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.five)) { v, insets ->
+
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
 
         val textInput = findViewById<EditText>(R.id.input)
         val button = findViewById<Button>(R.id.button)
@@ -34,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             val text = textInput.text.toString()
             Log.d("MY MESSAGE", "В инпут передали $text")
             Timber.d("Тимбер логгирует - $text")
+
         }
     }
 }
